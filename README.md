@@ -1,160 +1,165 @@
 <div align="center">
 
-# Pexe
+# David Henrique — Pexe
 
-### Software Developer · AI · Computer Vision
+### Software Developer · Backend · IA · Visão Computacional
 
-Construo aplicações que conectam **software, inteligência artificial e dados** para resolver problemas reais.
+Construo produtos de ponta a ponta, conectando **interfaces, APIs, automação, dados e inteligência artificial** para resolver problemas reais.
 
-`Python` · `TypeScript` · `JavaScript` · `Node.js` · `Machine Learning`
+`TypeScript` · `JavaScript` · `Python` · `Kotlin` · `Java`
 
-<br>
+<br />
 
+<a href="https://davidhenrique.dev.br/">
+  <img src="https://img.shields.io/badge/Ver_portfólio-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Ver portfólio" />
+</a>
 <a href="https://github.com/Pexe171?tab=repositories">
-  <img src="https://img.shields.io/badge/Explorar_repositórios-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Explorar_repositórios-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explorar repositórios" />
 </a>
 
 </div>
 
 ---
 
-## Sobre
+## Sobre mim
 
-Sou desenvolvedor focado em transformar ideias em **sistemas funcionais**, indo além da interface ou do modelo isolado.
+Sou desenvolvedor de software em Manaus, Brasil. Gosto de entender o problema por inteiro e transformar a ideia em algo que realmente funciona:
 
-Gosto de trabalhar no fluxo completo:
+**problema → arquitetura → backend → interface → testes → entrega**
 
-**problema → dados → backend → modelo → interface → testes → melhoria**
+Trabalho principalmente com:
 
-Atualmente exploro principalmente:
-
-* sistemas com **IA generativa e RAG**
-* aplicações Python e automações
-* visão computacional e machine learning
-* desenvolvimento web com JavaScript e TypeScript
-* integração entre modelos, APIs, dados e interfaces
+- desenvolvimento web e backend com TypeScript, React e Node.js;
+- automações, integrações e sistemas operacionais;
+- inteligência artificial, RAG e visão computacional;
+- aplicativos Android com Kotlin e Jetpack Compose;
+- infraestrutura, Docker, AWS e publicação de aplicações.
 
 ---
 
 ## Projetos em destaque
 
-### 🧠 [AgentCaixa](https://github.com/Pexe171/AgentCaixa)
+### 🎮 [TikTok Chaos](https://github.com/Pexe171/ModTikTok)
 
-Assistente inteligente baseado em **RAG** para responder perguntas utilizando documentos como fonte de conhecimento.
+Mod de Minecraft que transforma interações públicas de uma LIVE do TikTok em ações configuráveis dentro do jogo — sem aplicativo auxiliar, API paga ou senha da conta.
 
-O projeto combina recuperação híbrida, banco vetorial e diferentes provedores de modelos de linguagem.
+**Stack:** `Java` `Forge` `NeoForge` `TikTok LIVE` `OBS`
 
-**Stack**
+- editor visual de regras dentro do Minecraft;
+- suporte a seis combinações de versão e loader;
+- filas limitadas, rate limit, proteção contra duplicidade e limpeza emergencial;
+- simulador, metas, ranking e overlay local para OBS;
+- suporte a itens, criaturas e efeitos de outros mods.
 
-`Python` `ChromaDB` `BM25` `Ollama` `OpenAI` `Gemini` `Streamlit` `SQLite`
-
-**Destaques**
-
-* busca híbrida com vetores + BM25
-* geração com múltiplos provedores de LLM
-* query rewriting
-* ingestão e processamento de documentos
-* sistema de feedback para avaliação das respostas
-* avaliação em lote e geração de relatórios
-* interface de chat com Streamlit
-
-[→ Ver projeto](https://github.com/Pexe171/AgentCaixa)
+[→ Ver projeto](https://github.com/Pexe171/ModTikTok)
 
 ---
 
-### 🤟 [LIBRAS Trainer](https://github.com/Pexe171/libras-trainer)
+### 📱 [EasySSH](https://github.com/Pexe171/EasySSH)
 
-Sistema para **coleta de dados, treinamento e reconhecimento de letras em LIBRAS** utilizando câmera e visão computacional.
+Cliente Android local-first para acessar VPS e instâncias AWS EC2 por SSH, com terminal interativo e armazenamento protegido de chaves.
 
-```text
-Câmera
-   ↓
-MediaPipe Hands
-   ↓
-21 landmarks / 63 features
-   ↓
-Machine Learning
-   ↓
-Letra reconhecida
-```
+**Stack:** `Kotlin` `Jetpack Compose` `SSHJ` `Android Keystore` `xterm.js`
 
-**Stack**
+- autenticação por chave PEM/OpenSSH;
+- criptografia AES-GCM com Android Keystore;
+- verificação segura da identidade do servidor;
+- terminal móvel interativo;
+- versões públicas disponíveis para instalação.
 
-`Python` `MediaPipe` `OpenCV` `Flask` `scikit-learn`
+[→ Ver projeto](https://github.com/Pexe171/EasySSH)
 
-**Destaques**
+---
 
-* reconhecimento utilizando câmera
-* extração de landmarks das mãos
-* criação do próprio dataset
-* treinamento e comparação de modelos
-* Random Forest para classificação
-* interface para coleta e reconhecimento
+### 🤟 Ecossistema LIBRAS
 
-[→ Ver projeto](https://github.com/Pexe171/libras-trainer)
+Dois projetos conectados formam um fluxo completo de visão computacional: coleta de dados, treinamento, avaliação e reconhecimento de letras pela câmera.
+
+#### [LibrasApp](https://github.com/Pexe171/LibrasApp)
+
+Aplicativo Android nativo com CameraX e MediaPipe para detectar landmarks da mão e reconhecer poses estáticas em tempo real.
+
+#### [LIBRAS Trainer](https://github.com/Pexe171/libras-trainer)
+
+Laboratório em Python para coletar amostras, comparar modelos e treinar classificadores compatíveis com o aplicativo.
+
+**Stack:** `Kotlin` `Python` `MediaPipe` `OpenCV` `CameraX` `scikit-learn`
+
+[→ Ver LibrasApp](https://github.com/Pexe171/LibrasApp) · [Ver LIBRAS Trainer](https://github.com/Pexe171/libras-trainer)
+
+---
+
+### 💬 CrmPexe
+
+CRM full-stack privado para operação comercial e atendimento omnichannel, construído com arquitetura multi-workspace e integrações reais.
+
+**Stack:** `TypeScript` `React` `PostgreSQL` `Prisma` `Evolution API` `Chatwoot` `n8n`
+
+- pipeline comercial, contatos, leads, negócios e conversas;
+- WhatsApp via Evolution API;
+- inbox omnichannel integrada ao Chatwoot;
+- automações e workflows com n8n;
+- execução completa em Docker.
+
+[→ Ver apresentação no portfólio](https://davidhenrique.dev.br/#projetos)
+
+---
+
+## Outros projetos
+
+| Projeto | O que resolve | Tecnologias |
+| --- | --- | --- |
+| [Amigo Oculto](https://github.com/Pexe171/AmigoOcuto) | Inscrições, listas, sorteios e painel administrativo | TypeScript, React, Express, SQLite |
+| [Luna Web](https://github.com/Pexe171/LunaWEbCompleto) | Galeria com autenticação, uploads e moderação | Next.js, Node.js, MongoDB, Docker |
+| [JuntosNoite](https://github.com/Pexe171/JuntosNoite) | Watch party móvel com reprodução sincronizada | Kotlin, Compose, Supabase |
+| [Matador de Mob](https://github.com/Pexe171/MatadorDeMob) | Mod client-side com painel e controles configuráveis | Java, Fabric, Gradle |
 
 ---
 
 ## Stack
 
-### Desenvolvimento
+### Software
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square\&logo=nodedotjs\&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square\&logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square\&logo=css3\&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-149ECA?style=flat-square&logo=react&logoColor=white)
 
-### IA & Dados
+### IA, dados e visão
 
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square\&logo=opencv\&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square\&logo=openai\&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
-`RAG` · `LLMs` · `Computer Vision` · `Machine Learning` · `Vector Search` · `Embeddings`
+`MediaPipe` · `RAG` · `LLMs` · `Machine Learning` · `Computer Vision` · `Vector Search`
 
-### Ferramentas
+### Entrega e infraestrutura
 
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square\&logo=flask\&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+
+`AWS EC2` · `Playwright` · `Gradle` · `Vite` · `PM2`
 
 ---
 
-## Atualmente explorando
+## Como eu trabalho
 
 ```text
-AI Systems
-├── RAG & busca híbrida
-├── Agentes e LLMs
-├── Avaliação de respostas
-└── Automação
-
-Computer Vision
-├── MediaPipe
-├── OpenCV
-├── Classificação
-└── Processamento em tempo real
-
-Software
-├── Backend
-├── APIs
-├── Aplicações web
-└── Integração de sistemas
+Descobrir o problema
+        ↓
+Desenhar o fluxo e a arquitetura
+        ↓
+Construir a menor versão funcional
+        ↓
+Testar com dados e cenários reais
+        ↓
+Documentar, publicar e melhorar
 ```
-
----
-
-## GitHub
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Pexe171&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" />
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pexe171&layout=compact&theme=github_dark&hide_border=true" />
-
-</div>
 
 ---
 
@@ -162,6 +167,6 @@ Software
 
 ### Build. Test. Learn. Improve.
 
-Transformando experimentos em software que funciona.
+[Portfólio](https://davidhenrique.dev.br/) · [Repositórios](https://github.com/Pexe171?tab=repositories)
 
 </div>
