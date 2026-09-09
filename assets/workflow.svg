@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="132" viewBox="0 0 1200 132" role="img" aria-labelledby="title description">
+  <title id="title">Entender, construir, testar e ajustar</title>
+  <desc id="description">Quatro etapas ligadas por uma linha. O traço percorre o fluxo uma vez e se estabiliza. Versão estática quando a redução de movimento está ativa.</desc>
+  <style>
+    .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 22px; font-weight: 600; fill: #ece7df; }
+    .index { font-family: Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #b9b4ae; letter-spacing: 1px; }
+    .trace { stroke-dasharray: 1; animation: trace 3.8s cubic-bezier(.65,0,.35,1) both; }
+    @keyframes trace { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .trace { animation: none; } }
+  </style>
+  <rect width="1200" height="132" rx="8" fill="#17191e"/>
+  <path d="M72 99H1128" fill="none" stroke="#414149" stroke-width="2"/>
+  <path class="trace" pathLength="1" d="M72 99H1128" fill="none" stroke="#f28072" stroke-width="2"/>
+  <g class="index"><text x="72" y="32">01 / CONTEXTO</text><text x="350" y="32">02 / IMPLEMENTAÇÃO</text><text x="652" y="32">03 / VALIDAÇÃO</text><text x="936" y="32">04 / ITERAÇÃO</text></g>
+  <g class="label"><text x="72" y="66">Entender o uso</text><text x="350" y="66">Construir</text><text x="652" y="66">Testar</text><text x="936" y="66">Ajustar</text></g>
+  <g fill="#17191e" stroke="#f28072" stroke-width="2"><circle cx="72" cy="99" r="5"/><circle cx="350" cy="99" r="5"/><circle cx="652" cy="99" r="5"/><circle cx="936" cy="99" r="5"/></g>
+  <path d="m1119 93 9 6-9 6" fill="none" stroke="#f28072" stroke-width="2"/>
+</svg>
