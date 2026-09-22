@@ -1,85 +1,88 @@
 <p>
-  <picture>
-    <source media="(max-width: 600px)" srcset="./assets/header-mobile.svg" />
-    <img src="./assets/header.svg" width="1200" alt="David Henrique, Pexe171. Desenvolvedor de software em Manaus, Brasil. Web, Android, automação e visão computacional. Foto pessoal." />
-  </picture>
+  <a href="https://davidhenrique.dev.br/">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/header-mobile.svg" />
+      <img src="./assets/header.svg" width="1200" alt="David Henrique · Pexe171. Desenvolvedor em Manaus, Amazonas. Da interface à API, do navegador ao Android. Conheça meu portfólio." />
+    </picture>
+  </a>
 </p>
 
-# Oi, eu sou o David. Por aqui, Pexe.
+# Oi, eu sou o David. Pode chamar de Pexe.
 
-Sou desenvolvedor em **Manaus, Amazonas**. Meus projetos costumam começar com uma necessidade bem concreta: organizar pedidos de um restaurante, acessar um servidor pelo celular, distribuir trabalho entre atendentes ou entender o que uma câmera está vendo.
+Desenvolvedor em **Manaus, Amazonas**. Crio aplicações web e Android, conecto sistemas e exploro visão computacional. Também transformo ideias em mods de Minecraft.
 
-Trabalho no backend, na interface e nas integrações que fazem essas partes conversarem. Também crio mods de Minecraft: gosto de experimentar com jogos tanto quanto de construir ferramentas para o dia a dia.
+**[Conheça meu portfólio ↗](https://davidhenrique.dev.br/)** &nbsp; · &nbsp; [Projetos em destaque](#projetos-em-destaque) &nbsp; · &nbsp; [Catálogo completo](#catálogo-de-projetos)
 
-**[Meu portfólio ↗](https://davidhenrique.dev.br/)** &nbsp; · &nbsp; [Repositórios públicos](https://github.com/Pexe171?tab=repositories) &nbsp; · &nbsp; [Catálogo de projetos](#catálogo-de-projetos)
+## Projetos em destaque
+
+Três caminhos para conhecer meu código: um app, um experimento com câmera e um mod.
+
+### 01 / [EasySSH](https://github.com/Pexe171/EasySSH)
+
+**Seu servidor, no bolso.** Cliente Android para acessar VPS e instâncias AWS EC2 por SSH. Os perfis e as chaves ficam no aparelho; a conexão vai diretamente ao servidor, com verificação de identidade e proteção pelo Android Keystore.
+
+`Kotlin` · `Jetpack Compose` · `SSHJ` · `xterm.js`
+
+[Explorar o código ↗](https://github.com/Pexe171/EasySSH) &nbsp; · &nbsp; [Ver versões](https://github.com/Pexe171/EasySSH/releases)
+
+### 02 / LibrasApp & LIBRAS Trainer
+
+**Da câmera ao reconhecimento de letras.** Um conjunto de experimentos para coletar amostras da mão, treinar classificadores em Python e explorar o reconhecimento no Android. O foco são letras e poses estáticas; o reconhecimento ainda é limitado e não traduz frases em Libras.
+
+`Python` · `MediaPipe` · `OpenCV` · `scikit-learn` · `Kotlin`
+
+[App Android ↗](https://github.com/Pexe171/LibrasApp) &nbsp; · &nbsp; [Treinamento dos modelos ↗](https://github.com/Pexe171/libras-trainer)
+
+### 03 / [TikTok Chaos](https://github.com/Pexe171/ModTikTok)
+
+**A audiência entra no jogo.** Likes, presentes e interações de uma LIVE viram ações configuráveis no Minecraft. Tem editor visual de regras, controle de eventos, simulador e overlay para OBS. A conexão com o TikTok usa uma implementação comunitária, não oficial.
+
+`Java` · `Forge` · `NeoForge` · `OBS`
+
+[Explorar o código ↗](https://github.com/Pexe171/ModTikTok)
+
+## Sistemas para o dia a dia
+
+Além dos projetos abertos, desenvolvo ferramentas com código privado:
+
+- **Ajudante de Delivery · Web + Android** — pedidos, cardápio e histórico de restaurantes, com integração ao iFood e uma API compartilhada. Next.js, PostgreSQL, filas e Java no Android.
+- **CrmPexe** — contatos, funil comercial e conversas em espaços de trabalho separados, com integrações ao Chatwoot, WhatsApp via Evolution e n8n. React, NestJS e PostgreSQL.
+- **Ligador Leads** — distribuição de leads entre atendentes, controle de lotes e filas para evitar atribuições duplicadas. TypeScript, React, Express e SQLite.
+
+[Decisões técnicas e detalhes dos projetos →](./docs/PROJETOS.md)
 
 ---
 
-## O que estou construindo
+## Tecnologias no contexto
 
-### 01 / Ajudante de Delivery
+| Frente | Ferramentas que uso | Onde aparecem |
+| --- | --- | --- |
+| **Web e APIs** | TypeScript, JavaScript, React, Next.js, Node.js, NestJS, Express | Delivery, CRM, ferramentas comerciais e galerias |
+| **Android** | Kotlin, Java, Jetpack Compose, CameraX, Android Keystore | EasySSH, LibrasApp, Delivery e JuntosNoite |
+| **IA e visão** | Python, MediaPipe, OpenCV, scikit-learn, Flask, FastAPI, APIs de LLMs | Treino de classificadores, captura de pose e assistentes |
+| **Dados e eventos** | PostgreSQL, Prisma, SQLite, MongoDB, Redis, BullMQ, Socket.IO, Supabase | Persistência, filas, sincronização e operação em tempo real |
+| **Jogos e 3D** | Java, Fabric, Forge, NeoForge, Three.js | Mods de Minecraft, portfólio e visualização de assets |
+| **Entrega e automação** | Docker, Git, GitHub, Gradle, Playwright, PM2, Cloudflare | Builds, automações, execução e publicação dos projetos |
 
-**Operação de restaurante na web e no Android · código privado**
 
-Uma central para acompanhar pedidos, trabalhar o cardápio e consultar o histórico da operação. O painel web se conecta ao iFood, e o aplicativo Android consome a mesma API para levar o atendimento ao celular.
+## Como eu trabalho
 
-- **Na web:** painel instalável como PWA, pedidos, catálogo, importação de planilhas e propostas assistidas por IA, com aprovação humana antes da execução.
-- **No Android:** app nativo em Java, com fila de pedidos, etapas de preparo e despacho, cardápio e sessão protegida pelo Android Keystore.
-- **No backend:** autorização por restaurante, processamento de eventos com proteção contra duplicidade, filas e histórico de ações.
+Começo pelo fluxo de quem vai usar. Depois construo uma versão funcional, conecto as partes e testo os pontos em que o sistema pode falhar: pedido repetido, conexão perdida, dado incompleto, câmera sem uma boa leitura. A documentação acompanha o projeto para facilitar o próximo ajuste.
 
-`TypeScript` · `Next.js` · `PostgreSQL` · `Prisma` · `Redis / BullMQ` · `Java / Android`
-
-### 02 / CrmPexe & Ligador Leads
-
-**Duas ferramentas para operação comercial · código privado**
-
-O **CrmPexe** reúne contatos, negociações, etapas do funil e conversas em um CRM com espaços de trabalho separados. A operação em tempo real se conecta ao WhatsApp via Evolution, ao Chatwoot e a fluxos de automação com n8n.
-
-O **Ligador Leads** resolve outra parte do trabalho: distribuir leads entre atendentes, controlar os lotes em andamento e evitar que duas pessoas recebam o mesmo lead. O painel acompanha filas, estoque e equipe, com persistência local e automações de apoio.
-
-`TypeScript` · `React` · `NestJS / Express` · `PostgreSQL / SQLite` · `Socket.IO` · `Playwright`
-
-### 03 / [EasySSH](https://github.com/Pexe171/EasySSH)
-
-**Um terminal para levar o servidor no bolso · código público**
-
-Cliente Android para acessar VPS e instâncias AWS EC2 por SSH. Cadastro a máquina, importo a chave e abro um terminal interativo pelo celular. Os perfis e as chaves ficam no aparelho; a conexão vai diretamente ao servidor.
-
-O projeto combina interface em Jetpack Compose, terminal com xterm.js, chaves protegidas pelo Android Keystore e verificação da identidade do servidor na conexão.
-
-`Kotlin` · `Jetpack Compose` · `SSHJ` · `Android Keystore` · `xterm.js`
-
-[Código e documentação ↗](https://github.com/Pexe171/EasySSH) · [Versões para instalar](https://github.com/Pexe171/EasySSH/releases)
-
-### 04 / LibrasApp & LIBRAS Trainer
-
-**Da câmera ao reconhecimento de letras · código público, experimental**
-
-No **[LIBRAS Trainer](https://github.com/Pexe171/libras-trainer)**, coleto amostras da mão, preparo os dados, treino classificadores e comparo os resultados. No **[LibrasApp](https://github.com/Pexe171/LibrasApp)**, exploro o reconhecimento pela câmera do Android e a coleta supervisionada de novas amostras.
-
-O trabalho passa por detecção de landmarks, normalização, separação entre treino e teste e estabilidade da previsão entre frames. São experimentos com letras e poses estáticas; o app tem reconhecimento inicial limitado e ainda não é um tradutor de frases em Libras.
-
-`Python` · `MediaPipe` · `OpenCV` · `scikit-learn` · `Flask` · `Kotlin / CameraX`
-
-### 05 / [TikTok Chaos](https://github.com/Pexe171/ModTikTok)
-
-**A audiência participa do mundo de Minecraft · código público**
-
-Mod que transforma likes, presentes e outras interações de uma LIVE pública do TikTok em ações configuráveis no jogo. As regras são montadas em um painel dentro do Minecraft, com seleção visual de criaturas, itens e efeitos.
-
-Além da integração, trabalhei o que acontece quando chegam muitos eventos ao mesmo tempo: filas limitadas, controle de frequência, proteção contra duplicidade e pausa de emergência. O projeto também tem simulador e overlay local para OBS. A conexão com a LIVE usa uma implementação comunitária, não oficial.
-
-`Java` · `Forge` · `NeoForge` · `Eventos em tempo real` · `OBS`
-
-[Código e documentação ↗](https://github.com/Pexe171/ModTikTok)
+<p>
+  <picture>
+    <source media="(max-width: 600px)" srcset="./assets/workflow-mobile.svg" />
+    <img src="./assets/workflow.svg" width="1200" alt="Meu fluxo de trabalho: entender o uso, construir, testar e ajustar com o uso." />
+  </picture>
+</p>
 
 ---
 
 ## Catálogo de projetos
 
-Os projetos acima fazem parte deste conjunto. Nos privados, apresento o propósito e a tecnologia; o código e os dados de operação continuam restritos.
+Explore os repositórios e os experimentos por categoria. Os projetos em destaque também aparecem aqui.
 
-<details open>
+<details>
 <summary><strong>09 repositórios públicos de projetos</strong></summary>
 
 | Projeto | O que você encontra |
@@ -96,7 +99,7 @@ Os projetos acima fazem parte deste conjunto. Nos privados, apresento o propósi
 
 </details>
 
-<details open>
+<details>
 <summary><strong>07 repositórios privados</strong></summary>
 
 | Projeto | O que desenvolvo |
@@ -136,34 +139,11 @@ Também mantenho projetos locais, em diferentes estágios de desenvolvimento. Al
 
 <sub>Catálogo revisado em setembro de 2026. O repositório Pexe171 hospeda este perfil e não entra na contagem de projetos.</sub>
 
----
-
-## Tecnologias no contexto
-
-| Frente | Ferramentas que uso | Onde aparecem |
-| --- | --- | --- |
-| **Web e APIs** | TypeScript, JavaScript, React, Next.js, Node.js, NestJS, Express | Delivery, CRM, ferramentas comerciais e galerias |
-| **Android** | Kotlin, Java, Jetpack Compose, CameraX, Android Keystore | EasySSH, LibrasApp, Delivery e JuntosNoite |
-| **IA e visão** | Python, MediaPipe, OpenCV, scikit-learn, Flask, FastAPI, APIs de LLMs | Treino de classificadores, captura de pose e assistentes |
-| **Dados e eventos** | PostgreSQL, Prisma, SQLite, MongoDB, Redis, BullMQ, Socket.IO, Supabase | Persistência, filas, sincronização e operação em tempo real |
-| **Jogos e 3D** | Java, Fabric, Forge, NeoForge, Three.js | Mods de Minecraft, portfólio e visualização de assets |
-| **Entrega e automação** | Docker, Git, GitHub, Gradle, Playwright, PM2, Cloudflare | Builds, automações, execução e publicação dos projetos |
-
-## Como eu trabalho
-
-Começo pelo fluxo de quem vai usar. Depois construo uma versão funcional, conecto as partes e testo os pontos em que o sistema pode falhar: pedido repetido, conexão perdida, dado incompleto, câmera sem uma boa leitura. A documentação acompanha o projeto para facilitar o próximo ajuste.
-
-<p>
-  <picture>
-    <source media="(max-width: 600px)" srcset="./assets/workflow-mobile.svg" />
-    <img src="./assets/workflow.svg" width="1200" alt="Meu fluxo de trabalho: entender o uso, construir, testar e ajustar com o uso." />
-  </picture>
-</p>
 
 ---
 
-**Quer conhecer melhor algum desses projetos?**
+**Quer ver os projetos em ação?** [Visite meu portfólio ↗](https://davidhenrique.dev.br/)
 
-No [portfólio](https://davidhenrique.dev.br/) reúno as apresentações. Nos [repositórios públicos](https://github.com/Pexe171?tab=repositories), você encontra o código, a documentação e o caminho de cada experimento.
+[Todos os repositórios públicos](https://github.com/Pexe171?tab=repositories) &nbsp; · &nbsp; [Voltar aos destaques ↑](#projetos-em-destaque)
 
 <sub>David Henrique · Pexe171 · Manaus, AM</sub>

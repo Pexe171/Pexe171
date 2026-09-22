@@ -8,18 +8,13 @@ mkdirSync(assetDir, { recursive: true });
 // The original photograph is embedded unchanged. No remote fonts, scripts or images.
 const photo = readFileSync(resolve(assetDir, 'david-henrique.jpeg')).toString('base64');
 
-const header = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="438" viewBox="0 0 1200 438" role="img" aria-labelledby="title description">
+const header = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="432" viewBox="0 0 1200 432" role="img" aria-labelledby="title description">
   <title id="title">David Henrique — Pexe171</title>
-  <desc id="description">Desenvolvedor de software em Manaus. Web, Android, automação e visão computacional. Foto pessoal. Animação de entrada breve, respeitando redução de movimento.</desc>
-  <defs>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".035"/>
-    </pattern>
-  </defs>
+  <desc id="description">Desenvolvedor em Manaus. Da interface à API, do navegador ao Android. Fotografia pessoal e áreas de trabalho.</desc>
   <style>
     .mono { font-family: 'Cascadia Code', Consolas, 'Liberation Mono', monospace; }
     .sans { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; }
-    .rule { transform-origin: 52px 389px; animation: draw 1.1s cubic-bezier(.16,1,.3,1) both; }
+    .rule { transform-origin: 48px 376px; animation: draw 1.1s cubic-bezier(.16,1,.3,1) both; }
     .accent { animation: arrive .7s .15s cubic-bezier(.16,1,.3,1) both; }
     .signal { animation: signal 4s ease-in-out 1; }
     @keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -27,25 +22,29 @@ const header = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="438
     @keyframes signal { 0%,100% { opacity: 1; } 30%,65% { opacity: .35; } 45%,80% { opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .rule,.accent,.signal { animation: none; } }
   </style>
-  <rect width="1200" height="438" rx="8" fill="#17191e"/>
-  <rect width="1200" height="438" rx="8" fill="url(#grid)"/>
-  <path d="M52 56H74" stroke="#f28072" stroke-width="3"/>
-  <text x="89" y="61" class="mono" font-size="15" letter-spacing="2" fill="#dedcd6">PEXE171 / SOFTWARE DEVELOPER</text>
-  <text x="52" y="172" class="sans" font-size="92" font-weight="750" letter-spacing="-5" fill="#f5f0e8">David</text>
-  <text x="48" y="265" class="sans accent" font-size="92" font-weight="750" letter-spacing="-5" fill="#f28072">Henrique.</text>
-  <text x="54" y="312" class="sans" font-size="20" fill="#c4c1bc">Web, Android, automação</text>
-  <text x="54" y="341" class="sans" font-size="20" fill="#c4c1bc">e visão computacional.</text>
-  <path d="M667 89V336" stroke="#393b42"/>
-  <image x="716" y="87" width="432" height="243" href="data:image/jpeg;base64,${photo}"/>
+  <rect width="1200" height="432" rx="8" fill="#17191e"/>
+  <path d="M8 0H6V432H8" stroke="#f28072" stroke-width="6"/>
+  <path d="M48 51H74" stroke="#f28072" stroke-width="3"/>
+  <text x="90" y="58" class="mono" font-size="19" letter-spacing="1.5" fill="#f5f0e8">PEXE171</text>
+  <text x="1152" y="58" text-anchor="end" class="mono" font-size="16" letter-spacing="1.2" fill="#c4c1bc">DESENVOLVEDOR DE SOFTWARE</text>
+  <text x="44" y="167" class="sans" font-size="98" font-weight="750" letter-spacing="-5" fill="#f5f0e8">David</text>
+  <text x="44" y="262" class="sans accent" font-size="98" font-weight="750" letter-spacing="-5" fill="#f28072">Henrique.</text>
+  <text x="48" y="311" class="sans" font-size="25" fill="#dedcd6">Da interface à API.</text>
+  <text x="48" y="344" class="sans" font-size="25" fill="#dedcd6">Do navegador ao Android.</text>
+  <image x="742" y="99" width="410" height="230.625" href="data:image/jpeg;base64,${photo}"/>
   <g fill="none" stroke="#f28072" stroke-width="2">
-    <path d="M707 111V78H740 M1124 78H1157V111 M707 306V339H740 M1124 339H1157V306"/>
+    <path d="M734 122V91H765 M1129 91H1160V122 M734 307V338H765 M1129 338H1160V307"/>
   </g>
-  <circle class="signal" cx="723" cy="362" r="4" fill="#f28072"/>
-  <text x="740" y="367" class="mono" font-size="13" letter-spacing="2" fill="#c4c1bc">MANAUS, AMAZONAS / BRASIL</text>
-  <path d="M52 390H1148" stroke="#3b3c41"/>
-  <path class="rule" d="M52 390H1148" stroke="#f28072" stroke-width="2"/>
-  <text x="52" y="418" class="mono" font-size="11" letter-spacing="1.5" fill="#b3b0ab">INTERFACES / APIs / CÂMERAS / JOGOS</text>
-  <text x="1148" y="418" text-anchor="end" class="mono" font-size="11" letter-spacing="1.5" fill="#b3b0ab">davidhenrique.dev.br</text>
+  <circle class="signal" cx="746" cy="357" r="4" fill="#f28072"/>
+  <text x="762" y="363" class="mono" font-size="17" letter-spacing="1" fill="#c4c1bc">MANAUS, AMAZONAS · BRASIL</text>
+  <path d="M48 383H1152" stroke="#3b3c41"/>
+  <path class="rule" d="M48 383H1152" stroke="#f28072"/>
+  <g class="sans" font-size="21" fill="#dedcd6">
+    <text x="48" y="417">Web &amp; APIs</text>
+    <text x="374" y="417">Android</text>
+    <text x="654" y="417">Automação</text>
+    <text x="1003" y="417">Visão &amp; jogos</text>
+  </g>
 </svg>
 `;
 
@@ -69,20 +68,30 @@ const workflow = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1
 </svg>
 `;
 
-const headerMobile = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="588" viewBox="0 0 640 588" role="img" aria-labelledby="title description">
+const headerMobile = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title description">
   <title id="title">David Henrique — Pexe171</title>
-  <desc id="description">Desenvolvedor em Manaus. Nome, fotografia pessoal e áreas de trabalho em uma composição vertical para celular.</desc>
+  <desc id="description">Desenvolvedor em Manaus. Fotografia pessoal, web, Android, automação e visão computacional em uma composição compacta para celular.</desc>
   ${header.match(/<style>[\s\S]*?<\/style>/)[0]}
-  <rect width="640" height="588" rx="8" fill="#17191e"/>
-  <path d="M32 35H50" stroke="#f28072" stroke-width="3"/>
-  <text x="63" y="41" class="mono" font-size="16" letter-spacing="1.5" fill="#dedcd6">PEXE171 / SOFTWARE DEVELOPER</text>
-  <text x="27" y="107" class="sans accent" font-size="64" font-weight="750" letter-spacing="-3" fill="#f28072">David Henrique.</text>
-  <image x="32" y="139" width="576" height="324" href="data:image/jpeg;base64,${photo}"/>
-  <g fill="none" stroke="#f28072" stroke-width="2"><path d="M25 164V132H56 M584 132H615V164 M25 438V470H56 M584 470H615V438"/></g>
-  <circle cx="37" cy="495" r="4" fill="#f28072" class="signal"/>
-  <text x="53" y="501" class="mono" font-size="16" letter-spacing="1" fill="#c4c1bc">MANAUS, AMAZONAS / BRASIL</text>
-  <text x="32" y="542" class="sans" font-size="22" fill="#f5f0e8">Web, Android, automação e visão computacional.</text>
-  <path class="rule" d="M32 568H608" stroke="#f28072" stroke-width="2"/>
+  <style>.rule { transform-origin: 32px 366px; }</style>
+  <rect width="640" height="460" rx="8" fill="#17191e"/>
+  <path d="M8 0H6V460H8" stroke="#f28072" stroke-width="6"/>
+  <path d="M32 38H54" stroke="#f28072" stroke-width="3"/>
+  <text x="68" y="46" class="mono" font-size="24" letter-spacing="1" fill="#dedcd6">PEXE171 / DESENVOLVEDOR</text>
+  <text x="27" y="118" class="sans accent" font-size="65" font-weight="750" letter-spacing="-3" fill="#f28072">David Henrique.</text>
+  <image x="32" y="155" width="304" height="171" href="data:image/jpeg;base64,${photo}"/>
+  <g fill="none" stroke="#f28072" stroke-width="2">
+    <path d="M25 175V148H52 M316 148H343V175 M25 306V333H52 M316 333H343V306"/>
+  </g>
+  <g class="sans" font-size="29" fill="#f5f0e8">
+    <text x="376" y="184">Web &amp; APIs</text>
+    <text x="376" y="229">Android</text>
+    <text x="376" y="274">Automação</text>
+    <text x="376" y="319">Visão &amp; jogos</text>
+  </g>
+  <path class="rule" d="M32 366H608" stroke="#f28072"/>
+  <circle class="signal" cx="37" cy="403" r="4" fill="#f28072"/>
+  <text x="53" y="412" class="sans" font-size="28" fill="#dedcd6">Manaus, Amazonas · Brasil</text>
+  <text x="32" y="446" class="sans" font-size="23" fill="#c4c1bc">Da interface à API. Do navegador ao Android.</text>
 </svg>
 `;
 

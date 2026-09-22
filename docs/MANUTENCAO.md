@@ -1,6 +1,6 @@
 # Manutenção do perfil
 
-O conteúdo público está em `README.md`. Os resumos foram conferidos em setembro de 2026 usando a listagem autenticada dos repositórios, seus READMEs e, para ferramentas locais, a documentação disponível no workspace.
+A apresentação principal está em `README.md`; as descrições técnicas completas ficam em `docs/PROJETOS.md`. Os três destaques públicos aparecem primeiro, seguidos dos sistemas privados, tecnologias e catálogo recolhido por categoria. Os resumos foram conferidos em setembro de 2026 usando a listagem autenticada dos repositórios, seus READMEs e, para ferramentas locais, a documentação disponível no workspace.
 
 ## Conteúdo
 
@@ -13,11 +13,11 @@ O conteúdo público está em `README.md`. Os resumos foram conferidos em setemb
 
 ## Identidade e animação
 
-Grafite, texto claro e vermelho coral, com composição de ficha de projeto: nome grande, fotografia pessoal e marcações de enquadramento relacionadas ao trabalho com câmeras. O catálogo usa texto e tabelas nativas do GitHub para manter leitura e links acessíveis.
+Grafite, texto claro e vermelho coral, com composição de ficha de projeto: nome grande, fotografia pessoal, uma faixa coral lateral e marcações de enquadramento relacionadas ao trabalho com câmeras. O catálogo usa texto e tabelas nativas do GitHub para manter leitura e links acessíveis.
 
 Os SVGs são autocontidos. A foto fornecida foi incorporada sem alterar o JPEG e exibida na proporção original. Não há scripts, fontes remotas, widgets de estatísticas ou serviços externos de geração de imagens.
 
-As tags `picture` selecionam composições próprias até 600 px: a abertura empilha nome, foto e apresentação; o fluxo de trabalho se reorganiza em duas linhas.
+As tags `picture` selecionam composições próprias até 600 px: a abertura combina nome, foto e áreas de atuação em uma composição mais curta; o fluxo de trabalho se reorganiza em duas linhas.
 
 - Entrada: 700 ms, deslocamento de 7 px e desaceleração curta.
 - Linha de abertura: 1,1 segundo.
